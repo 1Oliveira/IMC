@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parTela"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SeekBar
+        android:id="@+id/sbAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="300dp"
+        app:layout_constraintLeft_toLeftOf="@id/parTela"
+        app:layout_constraintBottom_toBottomOf="@id/parTela"
+        android:max="21"
+        />
+    <SeekBar
+        android:id="@+id/sbPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintLeft_toLeftOf="@id/parTela"
+        app:layout_constraintBottom_toTopOf="@id/tvAltura"
+        android:max="220"/>
+    <TextView
+        android:id="@+id/tvAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecione a altura:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/sbAltura"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Selecione o peso:"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/sbPeso"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular IMC"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/sbAltura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/parTela"/>
+    <TextView
+        android:id="@+id/tvValorAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="@id/sbAltura"
+        app:layout_constraintTop_toTopOf="@id/sbAltura"
+        android:layout_marginRight="16dp"/>
+    <TextView
+        android:id="@+id/tvValorPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintLeft_toRightOf="@id/sbPeso"
+        app:layout_constraintTop_toTopOf="@id/sbPeso"
+        android:layout_marginRight="16dp"/>
+
+    <Spinner
+        android:id="@+id/spnSexo"
+        style="@style/Platform.Widget.AppCompat.Spinner"
+        android:layout_width="311dp"
+        android:layout_height="122dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/tvPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
