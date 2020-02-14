@@ -17,7 +17,7 @@
         android:layout_marginBottom="300dp"
         app:layout_constraintLeft_toLeftOf="@id/parTela"
         app:layout_constraintBottom_toBottomOf="@id/parTela"
-        android:max="21"
+        android:max="210"
         />
     <SeekBar
         android:id="@+id/sbPeso"
